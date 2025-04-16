@@ -1,0 +1,92 @@
+/* Main styles for the CSS Layouts and Responsive Design project */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    padding: 1rem;
+}
+
+nav a {
+    color: blue;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    background-color: #ffcc80; /* Lighter orange */
+}
+
+/* Main content layout using Flexbox */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+/* Sidebar styles */
+.sidebar {
+    flex: 1;
+    background-color: #e3f2fd; /* Light blue */
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+/* Main article styles */
+.article {
+    flex: 3;
+    background-color: #ffffff; /* White */
+    padding: 1rem;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: orange;
+    color: blue;
+}
+
+/* Grid layout for sections */
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .section-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,78 @@
+/* Responsive styles for different screen sizes */
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        background-color: black;
+        color: grey;
+    }
+    
+    nav {
+        flex-direction: column;
+        background-color: grey;
+        color: black;
+    }
+
+    .container {
+        padding: 10px;
+        background-color: black;
+        color: grey;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+        background-color: black;
+        color: grey;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: grey;
+        color: black;
+    }
+
+    .container {
+        padding: 20px;
+        background-color: black;
+        color: grey;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 901px) {
+    body {
+        font-size: 18px;
+        background-color: black;
+        color: grey;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: grey;
+        color: black;
+    }
+
+    .container {
+        padding: 30px;
+        background-color: black;
+        color: grey;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
